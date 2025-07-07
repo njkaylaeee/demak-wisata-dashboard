@@ -1,20 +1,9 @@
 import streamlit as st
-from helper import load_data, plot_data, plot_map
-from model import predict_next
 
-st.set_page_config(layout="wide")
-st.title("📈 Dashboard Prediksi Kunjungan Wisata Demak 2025")
+st.set_page_config(page_title="Dashboard Wisata Demak", layout="wide")
 
-df = load_data()
+st.markdown("""
+# 📊 Dashboard Prediksi Kunjungan Wisata Kabupaten Demak 2025
 
-st.subheader("📊 Data Kunjungan Wisata")
-st.dataframe(df)
-
-st.subheader("📉 Grafik Kunjungan Bulanan")
-st.pyplot(plot_data(df))
-
-st.subheader("🤖 Prediksi Bulan Berikutnya")
-st.dataframe(predict_next(df))
-
-st.subheader("🗺️ Peta Interaktif Destinasi Wisata")
-plot_map(df)
+Silakan pilih halaman dari sidebar 👈 untuk mulai menjelajah data, melatih model, atau mencoba prediksi.
+""")
