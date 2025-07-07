@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import folium
 from streamlit_folium import folium_static
 
-def load_data(path="data/data_wisata.csv"):
+def load_data(path="data_wisata.csv"):
     return pd.read_csv(path)
 
 def plot_data(df):
